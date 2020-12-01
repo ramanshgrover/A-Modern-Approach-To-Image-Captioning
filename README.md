@@ -4,9 +4,10 @@ This repository contains the source code for my course project on Image Captioni
 ## Table of Contents
   1. [Motivation](#Motivation)
   2. [The Dataset](#Data-Acquisition)
-  3. [Prerequisites and Dependencies](#Prerequisites-and-Dependencies)
-  4. [Methodology](#Methodology)
-  5. [License](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/master/LICENSE)
+  3. [Prerequisites, Downloadables and Dependencies](#Prerequisites,-Downloadables-and-Dependencies)
+  4. [Model Training](#Training-the-models)
+  5. [Model Evaluation](#Evaluation)
+  6. [License](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/master/LICENSE)
 
 ## Motivation
 In the past few years, recent developments in Image Captioning Systems have been inspired by advancements in object detection and machine translation. The task of image captioning involves two main aspects: (1) resolving the object detection problem in computer vision and (2) creating a language model that can accurately generate a sentence describing the detected objects. Seeing the success of encoder-decoder models with "soft" attention, I use soft alignment ([https://arxiv.org/pdf/1409.0473.pdf](https://arxiv.org/pdf/1409.0473.pdf)) and modern approaches in object detection ([https://arxiv.org/pdf/1412.7755.pdf](https://arxiv.org/pdf/1412.7755.pdf)) as a baseline model. To extend this work, I investigate the effect of pre-trained embeddings by integrating GloVe embeddings ([https://nlp.stanford.edu/pubs/glove.pdf](https://nlp.stanford.edu/pubs/glove.pdf)) and contextualized BERT vectors ([https://arxiv.org/pdf/1810.04805.pdf](https://arxiv.org/pdf/1810.04805.pdf)) to enhance the models performance and reduce training time.
@@ -76,9 +77,17 @@ A-Modern-Approach-To-Image-Captioning
 
 It is recommended to validate the models via the [jupyter notebook](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/main/validate.ipynb) provided.
 
-## Pre-Trained Models
-1. Baseline Soft Attention Model ([Show, Attend and Tell: Neural Image Caption Generation with Visual Attention])(https://arxiv.org/pdf/1502.03044.pdf)
+## Evaluation
+1. Baseline Soft Attention Model ([Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf))
 2. GloVe Soft Attention Model
 3. BERT Soft Attention Model
 
-Due github memory limitations, I wasn't able to upload my trained models. If you wish to validate Pre-Trained Models better, it's much simpler to use the Jupyter Notebook in this repository. Open the notebook and find the Load model section and pick the model you wish to validate and execute. If you would like to compare all the models against each other, try the compare_all() function.
+Due github memory limitations, I wasn't able to upload my trained models. If you wish to validate and evaluate the Pre-Trained Models better, it's much simpler to use the Jupyter Notebook in this repository. Open the notebook and find the Load model section and pick the model you wish to validate and execute. If you would like to compare all the models against each other, try the `compare_all()` function. Below are the results from my experiments.
+
+|   Model  | Validation Loss | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 |
+|:--------:|:---------------:|:------:|:------:|:------:|:------:|
+| Baseline |      3.452      |  48.51 |  18.84 |  7.406 |  3.097 |
+|   GloVe  |      3.325      |  49.70 |  20.07 |  8.214 |  3.552 |
+|   BERT   |      1.901      |  78.27 |  59.53 |  46.22 |  36.53 |
+
+You can find a detailed walkthrough of this project in the [Project Report](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/master/Report.pdf) attached within.
