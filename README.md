@@ -71,11 +71,11 @@ A-Modern-Approach-To-Image-Captioning
 └── validate.ipynb
 ```
 ## Training the models
-1. Open model.py and scroll to 'START Parameters' (Pre-Trained Models: Baseline, GloVe, BERT)
+1. Open model.py and scroll to '[START Parameters](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/bc34fd97a35790007ddbf6afd27e3013729aa1b9/model.py#L39-L57)' (Pre-Trained Models: Baseline, GloVe, BERT)
 2. Edit the parameters to train/test the particular model you want
 3. Run model.py with `python3`
 
-It is recommended to validate the models via the [jupyter notebook](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/main/validate.ipynb) provided.
+It is recommended to validate the models via the [Jupyter Notebook](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/main/validate.ipynb) provided.
 
 ## Evaluation
 1. Baseline Soft Attention Model ([Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf))
@@ -88,6 +88,6 @@ Due github memory limitations, I wasn't able to upload my trained models. If you
 |:--------:|:---------------:|:------:|:------:|:------:|:------:|
 | Baseline |      3.452      |  48.51 |  18.84 |  7.406 |  3.097 |
 |   GloVe  |      3.325      |  49.70 |  20.07 |  8.214 |  3.552 |
-|   BERT   |      1.901      |  78.27 |  59.53 |  46.22 |  36.53 |
+|   BERT   |      **1.901**      |  **78.27** |  **59.53** |  **46.22** |  **36.53** |
 
-You can find a detailed walkthrough of this project in the [Project Report](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/master/Report.pdf) attached within.
+You can find a detailed walkthrough and explanations of this project within the [Project Report](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/master/Report.pdf) attached within.
