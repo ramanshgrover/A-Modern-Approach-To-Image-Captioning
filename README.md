@@ -5,6 +5,7 @@ This repository contains the source code for my course project on Image Captioni
   1. [Motivation](#Motivation)
   2. [The Dataset](#Data-Acquisition)
   3. [Prerequisites, Downloadables and Dependencies](#Prerequisites,-Downloadables-and-Dependencies)
+  4. [Data Preprocessing](#Setup)
   4. [Model Training](#Training-the-models)
   5. [Model Evaluation](#Evaluation)
   6. [License](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/master/LICENSE)
@@ -70,6 +71,12 @@ A-Modern-Approach-To-Image-Captioning
 ├── requirements.txt
 └── validate.ipynb
 ```
+
+## Setup
+Uncomment the last line and run `preprocess.py` – this will re-size and normalize all the images to 224x224px, extract and tokenize the captions to build a vocabulary with all the training and validation set words (which came to be a list of 8,856 words) and generate train2014_resized, val2014_resized, and vocab.pkl respectively in the data folder.
+
+Now run `embeddings.py`. This will assign a weight (from the Pre-Trained GloVe Embeddings) to each word from the vocabulary generated in the previous step and generate glove_words.pkl in the glove.6B folder.
+
 ## Training the models
 1. Open model.py and scroll to '[START Parameters](https://github.com/ramanshgrover/A-Modern-Approach-To-Image-Captioning/blob/bc34fd97a35790007ddbf6afd27e3013729aa1b9/model.py#L39-L57)' (Pre-Trained Models: Baseline, GloVe, BERT)
 2. Edit the parameters to train/test the particular model you want
